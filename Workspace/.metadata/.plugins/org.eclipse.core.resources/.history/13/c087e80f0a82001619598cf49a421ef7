@@ -1,0 +1,14 @@
+
+public class UserUtil {
+
+	public static User captureUserDetails()
+	{
+		User user = new User();
+		
+		System.out.println("Enter Login Credentials");
+		
+		System.out.println("UserName : "+user.setLoginUserName(System.in.toString());
+		
+		return user;
+	}
+}

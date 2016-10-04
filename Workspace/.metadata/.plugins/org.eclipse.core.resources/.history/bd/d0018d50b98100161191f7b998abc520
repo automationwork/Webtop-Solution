@@ -1,0 +1,27 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class SeleniumTest {
+	
+	public  String openBrowser(String object, String data,String configPath) { 
+    if (CONFIG.getProperty(data).equals("Mozilla"))
+        driver =new FirefoxDriver();
+    else if (CONFIG.getProperty(data).equals("IE"))
+        driver =new InternetExplorerDriver();
+    else if (CONFIG.getProperty(data).equals("Chrome"))
+        driver =new ChromeDriver();
+    else if (CONFIG.getProperty(data).equals("Safari"))
+        driver =new SafariDriver();
+
+    driver.manage().window().maximize() ;
+	}
+}
+
+	public static void main(String[] args) {
+		
+		SeleniumTest test = new SeleniumTest();
+		WebDriver driver = ;
+		WebElement element;
+	}
+}
+	

@@ -1,0 +1,33 @@
+import java.util.Timer;
+import java.util.TimerTask;
+
+
+public class UtilTest {
+	
+	private static int timeInMinutes = 1;
+	
+	public static int getTimeInMinutes() {
+		return timeInMinutes;
+	}
+
+	public static void setTimeInMinutes(int timeInMinutes) {
+		UtilTest.timeInMinutes = timeInMinutes;
+	}
+
+public static void main(String[] args) {
+	
+
+	
+	TimerTask task = new TimerTask() {
+		
+		@Override
+		public void run() {
+			System.out.println("Hello World");
+			
+		}
+	};
+	
+	Timer timer = new Timer();
+	timer.scheduleAtFixedRate(task, 0, 5000);
+}
+}

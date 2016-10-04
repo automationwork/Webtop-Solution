@@ -1,0 +1,45 @@
+import java.io.BufferedReader;
+
+
+public class UserUtil {
+
+	public static User captureUserDetails()
+	{
+		User user = new User();
+		
+		BufferedReader br = null;
+		
+		 try {
+
+	            br = new BufferedReader(new InputStreamReader(System.in));
+
+		 }  catch (IOException e) {
+	            e.printStackTrace();
+	        } finally {
+	            if (br != null) {
+	                try {
+	                    br.close();
+	                } catch (IOException e) {
+	                    e.printStackTrace();
+	                }
+	            }
+		
+		System.out.println("Enter Login Credentials");
+		
+		System.out.print("User Name : ");
+		
+		user.setLoginUserName(System.in.toString());
+		
+		System.out.print("Password : ");
+		
+		user.setLoginPassWord(System.in.toString());
+		
+		return user;
+	}
+	
+	public static void main(String[] args) {
+		User user = captureUserDetails();
+		
+		System.out.println("User Name "+user.getLoginUserName());
+	}
+}

@@ -1,0 +1,28 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SeleniumUtil {
+	
+	
+	public static void main(String[] args) {
+		
+		SeleniumUtil.initiateBrowser();
+	}
+
+	public static WebDriver initiateBrowser() {
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.google.com/");
+		System.out.println(driver.getCurrentUrl());
+		
+		
+	}
+
+	public static void initiateBatch() {
+		// TODO Auto-generated method stub
+		
+	}
+}
+	

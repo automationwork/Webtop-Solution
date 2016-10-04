@@ -1,0 +1,26 @@
+
+public class UserUtil {
+
+	public static User captureUserDetails()
+	{
+		User user = new User();
+		
+		System.out.println("Enter Login Credentials");
+		
+		System.out.print("User Name : ");
+		
+		user.setLoginUserName(System.in.toString());
+		
+		System.out.print("Password : ");
+		
+		user.setLoginPassWord(System.in.toString());
+		
+		return user;
+	}
+	
+	public static void main(String[] args) {
+		User user = captureUserDetails();
+		
+		System.out.println("User Name "+user.getLoginUserName());
+	}
+}
